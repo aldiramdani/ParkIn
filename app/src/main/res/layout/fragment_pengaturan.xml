@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="com.d3ifcool.parkin.PengaturanFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:textSize="16sp"
+        android:fontFamily="@font/raleway"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:textColor="#000"
+        />
+    <EditText
+        android:paddingTop="10dp"
+        android:id="@+id/password_lama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password Lama"
+        android:inputType="textPassword"
+        />
+    <EditText
+        android:paddingTop="10dp"
+        android:id="@+id/password_baru"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password Baru"
+        android:inputType="textPassword"
+        />
+    <EditText
+        android:paddingTop="10dp"
+        android:id="@+id/password_konfirmasi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Konfirmasi Password Baru"
+        android:inputType="textPassword"
+        />
+    <ImageButton
+        android:id="@+id/btn_update"
+        android:paddingTop="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:layout_gravity="center"
+        android:src="@drawable/buttonsave"
+        />
+</LinearLayout>

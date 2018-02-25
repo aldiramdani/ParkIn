@@ -28,7 +28,7 @@ public class BerandaActivity extends AppCompatActivity implements NavigationView
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        MainFragment fragment = new MainFragment();
+        BlankFragment fragment = new BlankFragment();
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.frame_parkir,fragment);
         fragmentTransaction.commit();
@@ -79,18 +79,34 @@ public class BerandaActivity extends AppCompatActivity implements NavigationView
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            BerandaFragment fragment = new BerandaFragment();
+        if (id == R.id.nav_Beranda) {
+            BlankFragment fragment = new BlankFragment();
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.frame_parkir,fragment);
             fragmentTransaction.commit();
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_Catatan) {
+            CatatanFragment fragment = new CatatanFragment();
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.frame_parkir,fragment);
+            fragmentTransaction.commit();
 
+        } else if (id == R.id.nav_Pengaturan) {
+            PengaturanFragment fragment = new PengaturanFragment();
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.frame_parkir,fragment);
+            fragmentTransaction.commit();
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_Tentang) {
+            TentangFragment fragment = new TentangFragment();
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.frame_parkir,fragment);
+            fragmentTransaction.commit();
 
-        } else if (id == R.id.nav_manage) {
+//        } else if (id == R.id.nav_Bantuan){
 
+        } else if (id == R.id.nav_Lohout){
+            Intent i = new Intent(getApplicationContext(),MainActivity.class);
+            startActivity(i);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

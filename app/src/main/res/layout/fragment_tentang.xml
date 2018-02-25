@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="com.d3ifcool.parkin.PengaturanFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:textSize="16sp"
+        android:fontFamily="@font/raleway"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Versi Saat Ini"
+        android:textColor="#000"
+        android:paddingBottom="16dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1.0.0"
+        android:textSize="15sp"
+        android:paddingBottom="16dp"
+        />
+    <TextView
+        android:textSize="16sp"
+        android:fontFamily="@font/raleway"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Versi Terbaru"
+        android:textColor="#000"
+        android:paddingBottom="16dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1.0.0"
+        android:textSize="15sp"
+        android:paddingBottom="16dp"
+        />
+
+    <TextView
+        android:textSize="16sp"
+        android:fontFamily="@font/raleway"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pengembang"
+        android:textColor="#000"
+        android:paddingBottom="16dp"
+        />
+</LinearLayout>

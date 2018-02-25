@@ -5,25 +5,30 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
+            android:id="@+id/nav_Beranda"
             android:icon="@drawable/ic_home_black_48dp"
             android:title="Beranda" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_Catatan"
             android:icon="@drawable/ic_history_black_48dp"
             android:title="Catatan Parkir" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_Pengaturan"
             android:icon="@drawable/ic_settings_black_48dp"
             android:title="Pengaturan" />
         <item
-            android:id="@+id/nav_manage"
+            android:id="@+id/nav_Tentang"
             android:icon="@drawable/ic_info_outline_black_48dp"
             android:title="Tentang" />
+        <!--<item-->
+            <!--android:id="@+id/nav_Bantuan"-->
+            <!--android:icon="@drawable/ic_help_outline_black_48dp"-->
+            <!--android:title="Bantuan" />-->
         <item
-            android:id="@+id/nav_manage2"
-            android:icon="@drawable/ic_help_outline_black_48dp"
-            android:title="Bantuan" />
+            android:id="@+id/nav_Lohout"
+            android:icon="@drawable/ic_exit_to_app_black_24dp"
+            android:title="Logout"
+            />
     </group>
 
 

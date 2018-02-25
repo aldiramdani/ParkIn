@@ -10,6 +10,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -19,7 +20,8 @@ import android.widget.Toast;
  * A simple {@link Fragment} subclass.
  */
 public class MainFragment extends Fragment {
-    ImageButton imgbtn;
+    Button imgbtn;
+    ImageButton btnback;
     ImageView imageView;
 
     public MainFragment() {
@@ -32,13 +34,20 @@ public class MainFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_main, container, false);
-        imgbtn = (ImageButton) v.findViewById(R.id.imgbtn);
+        btnback = (ImageButton)v.findViewById(R.id.btnback);
+        imgbtn = (Button) v.findViewById(R.id.imgbtn);
         imageView = (ImageView)v.findViewById(R.id.imageView);
-        imgbtn.setOnClickListener(new View.OnClickListener() {
+        imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                 startActivityForResult(intent,0);
+            }
+        });
+        btnback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+            ChangeFragment();
             }
         });
         return v;
@@ -50,5 +59,8 @@ public class MainFragment extends Fragment {
         super.onActivityResult(requestCode, resultCode, data);
         Bitmap bitmap = (Bitmap)data.getExtras().get("data");
         imageView.setImageBitmap(bitmap);
+    }
+    private void ChangeFragment(){
+        getFragmentManager().beginTransaction().replace(R.id.frame_parkir,new BlankFragment()).addToBackStack(null).commit();
     }
 }

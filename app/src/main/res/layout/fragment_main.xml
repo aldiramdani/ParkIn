@@ -1,31 +1,64 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    android:id="@+id/mainFragment"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:padding="16dp"
+    android:orientation="vertical"
     tools:context="com.d3ifcool.parkin.MainFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:fontFamily="@font/raleway"
+        android:textSize="20sp"
+        android:text="Tempat"
+        android:textColor="#000"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:hint="Nama tempat"
+        android:id="@+id/nama_tempat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:hint="Keterangan tempat"
+        android:id="@+id/keterangan_tempat"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="35dp"
+        android:layout_height="wrap_content" />
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="fill_parent" />
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imgbtn"
-        android:background="@null"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="65dp"
-        android:layout_marginRight="25dp"
-        android:src="@drawable/addbutton"
+        android:layout_gravity="center"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/image"
         />
-    </RelativeLayout>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
 
+
+        <ImageButton
+            android:layout_marginTop="10dp"
+            android:background="@null"
+            android:src="@drawable/okbut"
+            android:id="@+id/btnback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/imgbtn"
+            android:text="Ok" />
+
+    </LinearLayout>
+
+</LinearLayout>
 </FrameLayout>
