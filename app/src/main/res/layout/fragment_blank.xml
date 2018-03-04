@@ -25,12 +25,12 @@
             />
 
         <TextView
+            android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textParkir1"
             android:text="Sebelah Motor Honda"
-            android:textSize="16sp"
-            android:id="@+id/textView2" />
+            android:textSize="16sp" />
 
         <ImageView
             android:id="@+id/imgprev1"
@@ -51,32 +51,36 @@
             android:id="@+id/btn_hapus1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textTgl1"
-            android:layout_marginEnd="63dp"
-            android:layout_toStartOf="@+id/imgprev1"
-            android:layout_marginTop="5dp"
+            android:layout_below="@+id/imgprev1"
+            android:layout_centerHorizontal="true"
             android:text="Hapus" />
+
+        <Button
+            android:id="@+id/btn_edit1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textTgl1"
+            android:layout_below="@+id/textTgl1"
+            android:layout_marginStart="15dp"
+            android:text="Edit" />
 
         <Button
             android:id="@+id/btn_bagi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textTgl1"
-            android:layout_marginTop="5dp"
-            android:layout_marginStart="33dp"
-            android:layout_toEndOf="@+id/textView2"
+            android:layout_alignStart="@+id/imgprev1"
+            android:layout_below="@+id/imgprev1"
             android:text="Bagi" />
 
         <ImageButton
+            android:id="@+id/test"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/test"
-            android:background="@null"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
             android:layout_marginBottom="65dp"
             android:layout_marginRight="25dp"
-            android:src="@drawable/addbutton"
-            />
+            android:background="@null"
+            android:src="@drawable/addbutton" />
     </RelativeLayout>
 </FrameLayout>
