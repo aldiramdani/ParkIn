@@ -24,6 +24,8 @@ import android.widget.Toast;
 public class BlankFragment extends Fragment {
     ImageButton floatbtn;
     Button btn_hapus1;
+    Button btn_edit1;
+    Button btn_bagi;
     public BlankFragment() {
         // Required empty public constructor
     }
@@ -37,6 +39,18 @@ public class BlankFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_blank, container, false);
         floatbtn = (ImageButton)v.findViewById(R.id.test);
         btn_hapus1 = (Button)v.findViewById(R.id.btn_hapus1);
+        btn_edit1 = (Button)v.findViewById(R.id.btn_edit1);
+        btn_bagi = (Button)v.findViewById(R.id.btn_bagi);
+        btn_bagi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent sendIntent = new Intent();
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.putExtra(Intent.EXTRA_TEXT, "This is my text to send.");
+                sendIntent.setType("text/plain");
+                startActivity(sendIntent);
+            }
+        });
         final BlankFragment blankFragment = new BlankFragment();
         floatbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +59,12 @@ public class BlankFragment extends Fragment {
             }
         });
 
+        btn_edit1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ChangeFramentEdit();
+            }
+        });
         
         btn_hapus1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,5 +82,9 @@ public class BlankFragment extends Fragment {
     }
     private void ChangeFragment(){
     getFragmentManager().beginTransaction().replace(R.id.frame_parkir,new MainFragment()).addToBackStack(null).commit();
+    }
+
+    private void ChangeFramentEdit(){
+        getFragmentManager().beginTransaction().replace(R.id.frame_parkir,new EditFragment()).addToBackStack(null).commit();
     }
 }

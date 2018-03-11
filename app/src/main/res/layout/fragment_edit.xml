@@ -1,0 +1,66 @@
+<FrameLayout
+    android:id="@+id/mainFragment"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:orientation="vertical"
+        tools:context="com.d3ifcool.parkin.EditFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/raleway"
+            android:textSize="20sp"
+            android:text="Tempat"
+            android:textColor="#000"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:hint="Nama tempat"
+            android:text="Parkiran FIT"
+            android:id="@+id/nama_tempat_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:text="Sebelah Motor Honda"
+            android:hint="Keterangan tempat_edit"
+            android:id="@+id/keterangan_tempat"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="35dp"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/imageView_edit"
+            android:layout_gravity="center"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:src="@drawable/ic_launcher_background"
+            />
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+
+            <ImageButton
+                android:layout_marginTop="10dp"
+                android:background="@null"
+                android:src="@drawable/okbut"
+                android:id="@+id/btnback_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/imgbtn"
+                android:text="Ok" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>
