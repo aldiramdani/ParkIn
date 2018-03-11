@@ -27,7 +27,7 @@ public class BerandaActivity extends AppCompatActivity implements NavigationView
         setContentView(R.layout.activity_beranda);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        //Test
         BlankFragment fragment = new BlankFragment();
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.frame_parkir,fragment);
